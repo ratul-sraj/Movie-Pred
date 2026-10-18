@@ -1,0 +1,20 @@
+# Dataset (downloaded by the notebook, ~228 MB)
+ml-32m/
+*.zip
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
