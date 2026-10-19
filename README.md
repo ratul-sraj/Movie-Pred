@@ -44,14 +44,15 @@ afterwards), then executes end to end in roughly 75 seconds.
 
 ## The important detail: similarity is computed on demand
 
-An earlier version of this notebook did:
+A full pairwise matrix would be:
 
 ```python
 cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)   # don't
 ```
 
 With 87,585 movies that is an 87,585 × 87,585 matrix — **7.7 billion entries**,
-about **61 GB** as `float64`. It raises `MemoryError` on any ordinary machine.
+about **61 GB** as `float64`, which will not fit in memory on an ordinary
+machine. So the notebook does not build it.
 
 You almost never need the full matrix. A query only needs the single row for the
 movie asked about:
